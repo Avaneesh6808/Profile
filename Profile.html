@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Avaneesh Portfolio Card</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#050816,#0d1b2a,#14213d);
+}
+.card{
+    width:360px;
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(12px);
+    border-radius:25px;
+    padding:30px;
+    text-align:center;
+    color:white;
+    box-shadow:0 10px 35px rgba(0,0,0,.5);
+    transition:.4s;
+}
+.card:hover{
+    transform:translateY(-10px);
+}
+.profile{
+    width:150px;
+    height:150px;
+    margin:auto;
+    border-radius:50%;
+    padding:5px;
+    background:linear-gradient(45deg,#00c6ff,#0072ff);
+}
+.profile img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center 10%;
+    border-radius:50%;
+}
+h1{
+    margin-top:18px;
+    font-size:28px;
+}
+h3{
+    margin:8px 0 15px;
+    color:#66c2ff;
+    font-weight:500;
+}
+.about{
+    font-size:14px;
+    color:#ddd;
+    line-height:1.6;
+}
+.skills{
+    margin-top:22px;
+}
+.skills span{
+    display:inline-block;
+    padding:8px 15px;
+    margin:6px;
+    border-radius:20px;
+    background:#0072ff;
+    font-size:13px;
+}
+.social{
+    margin-top:25px;
+    text-align:left;
+}
+.social p{
+    margin:10px 0;
+    font-size:14px;
+}
+.social a{
+    color:#80d8ff;
+    text-decoration:none;
+}
+.social a:hover{
+    text-decoration:underline;
+}
+button{
+    margin-top:25px;
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:30px;
+    background:#00a8ff;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    transition:.3s;
+}
+button:hover{
+    background:#0088cc;
+}
+</style>
+</head>
+<body>
+<div class="card">
+<div class="profile">
+<img src="13789.png.png" alt="Profile">
+</div>
+<h1>Avaneesh. V</h1>
+<h3 id="typing"></h3>
+<p class="about">
+Passionate Python Developer and aspiring Data Analyst.
+Learning new technologies every day and building projects
+using Python and SQL.
+</p>
+<div class="skills">
+<span>Python</span>
+<span>SQL</span>
+</div>
+<div class="social">
+<p>
+<b>GitHub</b><br>
+<a href="https://github.com/Avaneesh6808" target="_blank">
+V Avaneesh
+</a>
+</p>
+<p>
+<b>LinkedIn</b><br>
+<a href="https://linkedin.com/in/v-avaneesh-15077040b" target="_blank">
+V Avaneesh
+</a>
+</p>
+<p>
+<b>Email</b><br>
+<a href="mailto:vavaneesh19@gmail.com">
+vavaneesh19@gmail.com
+</a>
+</p>
+</div>
+<button onclick="window.open('https://github.com/Avaneesh6808')">
+Visit GitHub
+</button>
+</div>
+<script>
+const text="Python Developer | Data Analyst | Student";
+let i=0;
+function typing(){
+if(i<text.length){
+document.getElementById("typing").innerHTML+=text.charAt(i);
+i++;
+setTimeout(typing,80);
+}
+
+}
+typing();
+</script>
+
+</body>
+</html>
